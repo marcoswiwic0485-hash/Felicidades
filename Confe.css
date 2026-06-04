@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    radial-gradient(circle,#ff4da6,#b30059);
+    font-family:Arial, sans-serif;
+}
+
+.card{
+    width:800px;
+    height:500px;
+    background:#d9c8ff;
+    border-radius:40px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(255,255,255,.4);
+}
+
+.cake{
+    margin-top:90px;
+    position:relative;
+}
+
+.candle{
+    width:25px;
+    height:100px;
+    background:#66d9ff;
+    margin:auto;
+    border-radius:10px;
+    position:relative;
+}
+
+.flame{
+    width:30px;
+    height:45px;
+    background:gold;
+    border-radius:50%;
+    position:absolute;
+    top:-35px;
+    left:-2px;
+    box-shadow:0 0 30px gold;
+    animation:flame .3s infinite alternate;
+}
+
+@keyframes flame{
+    from{
+        transform:rotate(-5deg) scale(1);
+    }
+
+    to{
+        transform:rotate(5deg) scale(1.15);
+    }
+}
+
+.cake-top,
+.cake-middle,
+.cake-bottom{
+    width:180px;
+    height:30px;
+    margin:auto;
+}
+
+.cake-top{
+    background:white;
+    border-radius:10px 10px 0 0;
+}
+
+.cake-middle{
+    background:#ff66b3;
+}
+
+.cake-bottom{
+    background:#ffe6e6;
+    border-radius:0 0 10px 10px;
+}
+
+#mensaje{
+    margin-top:50px;
+    color:#ff1493;
+    font-size:60px;
+    text-shadow:
+    0 0 10px #ff1493,
+    0 0 20px #ff1493,
+    0 0 40px #ff1493;
+    font-family:cursive;
+}
+
+.confetti{
+    position:absolute;
+    width:10px;
+    height:10px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+    from{
+        transform:translateY(-20px) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .card{
+        width:95%;
+        height:auto;
+        padding:20px;
+    }
+
+    #mensaje{
+        font-size:35px;
+        margin-top:30px;
+        line-height:1.3;
+    }
+
+    .cake{
+        transform:scale(0.8);
+        margin-top:40px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .card{
+        width:95%;
+        border-radius:25px;
+        padding:15px;
+    }
+
+    #mensaje{
+        font-size:28px;
+    }
+
+    .cake{
+        transform:scale(0.7);
+    }
+
+}
